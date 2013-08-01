@@ -1,0 +1,46 @@
+﻿@using MvcAppMenu.Models;
+@model IEnumerable<Menu> 
+
+@{
+    Layout = null;
+}
+
+@functions{
+    public void CriarMenu(Menu item, int idPai, IEnumerable<Menu> listaFilhos)
+    {
+       
+        
+    }
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <ul>
+        @foreach (var item in Model.Where(p => p.MenuPai == 0))
+        {
+            <li>@item.Nome
+
+
+
+
+            </li>
+            
+                
+                 //CriarMenu(item, item.MenuPai, Model.Where(m => m.MenuPai == item.Id));
+ 
+            
+            
+        }
+
+            </ul>
+        
+    </div>
+</body>
+</html>
