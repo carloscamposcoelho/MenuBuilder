@@ -1,16 +1,7 @@
-﻿@using MvcAppMenu.Models;
-@model IEnumerable<Menu> 
+﻿@model  string
 
 @{
     Layout = null;
-}
-
-@functions{
-    public void CriarMenu(Menu item, int idPai, IEnumerable<Menu> listaFilhos)
-    {
-       
-        
-    }
 }
 
 <!DOCTYPE html>
@@ -22,25 +13,13 @@
 </head>
 <body>
     <div>
-        <ul>
-        @foreach (var item in Model.Where(p => p.MenuPai == 0))
-        {
-            <li>@item.Nome
+        Menu Não Estilizado
+        <br />
 
 
-
-
-            </li>
-            
-                
-                 //CriarMenu(item, item.MenuPai, Model.Where(m => m.MenuPai == item.Id));
- 
-            
-            
-        }
-
-            </ul>
-        
+        @Html.Raw(@Model)
     </div>
+
+
 </body>
 </html>
